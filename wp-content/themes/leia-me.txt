@@ -1,0 +1,4 @@
+Instruções do tema:
+
+1. Instalar as dependências de desenvolvimento dentro da pasta do tema: npm install / npm i;
+2. Estou enviando o arquivo do banco de dados em sql (bx_desafio.sql) e a pasta uploads caso queiram utilizar;

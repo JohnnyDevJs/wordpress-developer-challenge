@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Circular Spotify TxT';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/CircularSpotifyTxT-Med.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Circular Spotify TxT';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/CircularSpotifyTxT-Bold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Circular Spotify TxT';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./assets/fonts/CircularSpotifyTxT-Black.woff2') format('woff2');
+  }
+}
+
+@layer utilities {
+  .custom-transition {
+    @apply duration-500 transition-all
+  }
+
+  .custom-fluid {
+    @apply ml-[calc(16px_+_(100_-_16)_*_((100vw_-_320px)_/_(1980_-_320)))]
+  }
+}
+
+@layer components {
+  .custom-container{
+    @apply max-w-7xl m-auto px-4
+  }
+
+  .custom-button {
+    @apply inline-flex items-center justify-center rounded-[0.188rem] font-medium custom-transition border outline-none;
+
+    &.size-sm {
+      @apply h-8 text-lg px-10 max-md:h-7 max-md:text-xs max-md:px-8;
+    }
+
+    &.size-lg {
+      @apply h-16 max-md:h-[2.375rem] text-lg max-md:text-xs px-24 max-md:px-16;
+    }
+
+    &.primary {
+      @apply bg-red-500 text-white hover:bg-red-600 border-transparent;
+    }
+
+    &.secondary {
+      @apply hover:text-white hover:bg-transparent hover:border-white bg-white text-gray-500;
+    }
+
+    &.outline {
+      @apply bg-transparent text-white hover:bg-white hover:text-gray-500 max-md:w-[6.362rem];
+    }
+  }
+}
+
+.slick-slide > div {
+  margin: 0 0.75rem;
+}
+.slick-list {
+  margin: 0 -0.75rem !important;
+}
